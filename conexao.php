@@ -6,7 +6,7 @@ $dotenv->load();
 // Connect to PlanetScale using credentials stored in environment variables
 $mysqli = mysqli_init();
 $mysqli->ssl_set(NULL, NULL, "/etc/ssl/certs/ca-certificates.crt", NULL, NULL);
-$mysqli->real_connect($_ENV["aws.connect.psdb.cloud"], $_ENV["3ybwctvrykitnuva75r5"], $_ENV["pscale_pw_dUyHF5odoR14E7NIdM7sCD90J2H3yBNXn9EoVoVabNx"], $_ENV["controlador"]);
+$mysqli->real_connect($_ENV["DATABASE_HOST"],$_ENV["DATABASE_USERNAME"],$_ENV["DATABASE_PASSWORD"],$_ENV["DATABASE_HOST"]);
 
 // Check connection
 if ($mysqli->connect_errno) {
