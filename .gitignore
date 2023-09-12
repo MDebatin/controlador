@@ -1,7 +1,3 @@
 # Arquivos de configuração
-config.php
-config.ini
-
-# Outros arquivos e diretórios a serem ignorados...
- 
 .env
+ca-certificates.pem
