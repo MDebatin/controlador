@@ -8,17 +8,17 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
-    min-height: 100vh;
+    height: 100vh;
 }
+
 .nav-6 {
     position: fixed; /* Fixa a navbar na parte superior da tela */
     top: 0; /* Define a distância a partir do topo da tela */
     width: 100%; /* Define a largura da navbar como 100% da tela */
     background: #f2295bf0;
     z-index: 1000; /* Certifica-se de que a navbar está acima de outros elementos */
-    display: flex; /* Torna a navbar um container flexível */
+    display: block; /* Torna a navbar um container flexível */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     text-align: center; /* Centraliza horizontalmente */
@@ -124,6 +124,7 @@ body {
     transform: translateY(-1.5rem);
     border: #f2295bf0 0.2em solid;
     border-radius: 2.5rem 0 2.5rem 0;
+    cursor: pointer;
    }
 
 .card__line {
@@ -206,3 +207,242 @@ body {
         filter: blur(0);
     }
 }
+
+.icon-card {
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Coloca a imagem no centro horizontal */
+    margin-bottom: 10px;
+    transform: translateX(-50%); /* Move a imagem de volta 50% da largura dela mesma */
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+}
+/* Custom Password Manager Styles */
+/* Custom Password Manager Styles */
+.orange {
+    color: #f2295bf0;
+}
+
+.container1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: calc(100vh - 66px);
+    margin-top: 66px; /* Cria espaço abaixo da barra de navegação */
+}
+
+.form-container {
+    width: 50%;
+    display: flex; /* Adicione display flex para alinhar verticalmente */
+    justify-content: center; /* Alinha horizontalmente no centro */
+}
+
+.form {
+    width: 50%;
+    padding: 20px;
+    background-color: #333333;
+    border-left: 5px solid #f2295bf0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    align-items: center; /* Alinha verticalmente no centro */
+}
+
+.heading {
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.form-container .input,
+.form-container .textarea {
+    color: #87a4b6;
+    width: 95%;
+    background-color: #141414;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    border-left: 1px solid transparent;
+}
+
+.form-container .input:focus,
+.form-container .textarea:focus {
+    border-left: 5px solid #f2295bf0;
+}
+
+.form-container .button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.form-container .send-button {
+    flex-basis: 70%;
+    background: #f2295bf0;
+    padding: 10px;
+    color: #333333;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-container .send-button:hover {
+    background: transparent;
+    border: 1px solid #f2295bf0;
+    color: #f2295bf0;
+}
+
+.form-container .reset-button-container {
+    filter: drop-shadow(1px 1px 0px #f2295bf0);
+    flex-basis: 30%;
+}
+
+.form-container .reset-button {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    color: #f2295bf0;
+    font-weight: bold;
+    background: #333333;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+    transition: all 0.2s ease-in-out;
+}
+
+.form-container .reset-button:hover {
+    background: #f2295bf0;
+    color: #333333;
+}
+
+.right-half {
+    width: 50%;
+    padding: 20px;
+}
+
+.existing-passwords {
+    background-color: #333333;
+    width: 50%;
+    border-left: 5px solid #f2295bf0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    height: calc(90vh - 66px); /* Ajuste a altura subtraindo padding, margin e a altura da barra de navegação */
+    margin-right: 5px;
+}
+
+
+.existing-passwords h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.existing-passwords table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.existing-passwords th,
+.existing-passwords td {
+    border: 1px solid #141414;
+    padding: 10px;
+    text-align: left;
+}
+
+.existing-passwords th {
+    background-color: #f2295bf0;
+    color: #333333;
+}
+
+.existing-passwords tr:nth-child(even) {
+    background-color: #333333;
+    color: #f2295bf0;
+}
+
+.existing-passwords tr:nth-child(odd) {
+    background-color: #333333;
+    color: #f2295bf0;
+}
+
+
+.table-container {
+    background-color: #333333;
+    width: 50%;
+    border-left: 5px solid #f2295bf0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    height: calc(90vh - 66px); /* Ajuste a altura subtraindo padding, margin e a altura da barra de navegação */
+    margin-right: 5px;
+}
+
+
+.table-container h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+    border: 1px solid #141414;
+    padding: 10px;
+    text-align: left;
+}
+
+.table-container th {
+    background-color: #f2295bf0;
+    color: #333333;
+}
+
+.table-container tr:nth-child(even) {
+    background-color: #333333;
+    color: #f2295bf0;
+}
+
+.table-container tr:nth-child(odd) {
+    background-color: #333333;
+    color: #f2295bf0;
+}
+
+.summary-container {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Para empilhar as divs verticalmente */
+    gap: 10px; /* Espaçamento vertical entre as divs */
+}
+
+.summary {
+    background-color: #333333;
+    border: 5px solid #f2295bf0;
+    text-align: center;
+    color: #ffffff;
+    height: 100px; /* Altura de 100 pixels para todas as divs */
+    display: flex; /* Alinha verticalmente o conteúdo */
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.summary h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.summary span {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+
+
+
+
+
